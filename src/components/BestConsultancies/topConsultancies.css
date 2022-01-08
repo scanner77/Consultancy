@@ -1,12 +1,6 @@
-.main_main_div {
+.top_consultancies {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-}
-.top_5_cons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
 }

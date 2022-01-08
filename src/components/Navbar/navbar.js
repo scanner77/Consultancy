@@ -17,15 +17,15 @@ function Navbar() {
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             Job Finder
             <div className = "fullstackdeveloper">Consultancy Finder</div>
-            <i class='fas fa-microphone-alt' />
+            <i className='fas fa-microphone-alt' />
           </Link>
           
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              
+
+          <ul id = "dropdown_id" className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>              
               <Link to='/' 
               className='nav-links' 
               onClick={closeMobileMenu}
@@ -44,44 +44,46 @@ function Navbar() {
               </Link>
 
             </li>
-            {/* <li className='nav-item'>
-              <Link
-                to='/projects'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Projects
-              </Link>
-            </li> */}
-            {/* <li className='nav-item'>
-              <Link
-                to='/contact'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Contact
-              </Link>
-            </li> */}
 
-{/* =========================== */}
             <li className='nav-item'>
               <Link
-                to='/account'
+                to='/contactUs'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+              Contact Us
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+            <div className="dropdown">
+            <br/>
+            <br/>
+            <div className="dropdown-content">
+              <Link id = "one"
+                to='/myaccount'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Account
               </Link>
-            </li>
-{/* ==========Sign Up */}
-            <li className='nav-item'>
-              <Link
+              <Link id = "one" 
+                to='/login'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+              Sign In
+              </Link>
+              
+              <Link id = "one" 
                 to='/signup'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-              SignUp
+              Sign Up
               </Link>
+            </div>
+          </div>
             </li>
         
           </ul>

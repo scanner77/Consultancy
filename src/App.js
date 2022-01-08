@@ -10,6 +10,7 @@ import Project from './components/Projects/Project';
 // import Contact from './components/Contact/Contact';
 // import ProjectGrid from './components/Projects/ProjectGrid';
 // import Post from './components/Posty/Post';
+import Login from './components/Login/Login'
 
 function App() {
   return (
@@ -17,12 +18,13 @@ function App() {
     <Router>
      <Navbar />
      <Routes>
-       <Route path = "/" exact element = {<Home/>} />
+       <Route exact path = "/" element = {<Home/>} />
         <Route path = "/about" element = {<About/>}/>
         <Route path = "/signup" element = {<Signup/>} />
         <Route path = "/myaccount" element = {<MyAccount/>} />
         <Route path = "/project" element = {<Project/>}/>  
         <Route path = "/contact" element = {<Signup />}/>  
+        <Route path = "/login" element = {<Login />} />
       </Routes>
      
      </Router>
